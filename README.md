@@ -8,19 +8,19 @@ This program requires the use of an API token from DarkSky. Register on the [Dar
 
 You may clone this repo using: 
 
-```https://github.com/joshwertheim/forecastio-client.git```
+`https://github.com/joshwertheim/forecastio-client.git`
 
 Next, `cd` to this repo and make sure all required third-party modules are installed as they are pre-requisites for running this program: 
 
-```pip install -r requirements.txt```
+`pip install -r requirements.txt`
 
 ## Usage
 
 There are currently two ways to use this program:
 
-Run ```python modules/core.py``` and the program will ping [http://freegeoip.net](http://freegeoip.net) for your current geolocation.
+Run `python modules/core.py` and the program will ping [http://freegeoip.net](http://freegeoip.net) for your current geolocation.
 
-Run ```python modules/core.py -zipcode 94107``` and the program will use the *geopy* module to obtain coordinates for your given zipcode, and then retrieves weather forecast data for that location.
+Run `python modules/core.py -zipcode 94107` and the program will use the *geopy* module to obtain coordinates for your given zipcode, and then retrieves weather forecast data for that location.
 
 At present, the output should look something like this:
 
