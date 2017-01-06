@@ -6,8 +6,8 @@ from geopy.geocoders import Nominatim
 class Location(object):
     """Create a Location instance
 
-    Use to get current geolocation of the device running
-    this code
+    Use to get current coordinates of the device running
+    this code via a geolocation service or zipcode
     """
 
     def current_position_coordinates(self):
