@@ -6,6 +6,8 @@ def setup():
     position_coordinates = loc.current_position_coordinates()
 
     fcclient = FCClient()
+    fcclient.current_forecast_response(position_coordinates)
+    fcclient.current_data()
 
 def main():
     setup()
