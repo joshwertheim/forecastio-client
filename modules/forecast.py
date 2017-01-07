@@ -3,6 +3,9 @@ import json
 
 import requests
 
+from location import Location
+from utils import Bcolors
+
 class FCClient(object):
     """Create a FCClient instance
 
@@ -37,16 +40,22 @@ class FCClient(object):
         except Exception, e:
             print e
 
-    def current_data(self):
+    def current_data(self, lat, lon):
+        loc = Location()
+        current_location = loc.location_from_coordinates(lat, lon)
+
+        print Bcolors.OKBLUE + '{} ({}), {}, {}\n'.format(current_location['city'], current_location['neighborhood'], \
+            current_location['state'], current_location['country'].upper()) + Bcolors.ENDC
+
         if self.measurement_units is None:
             self.measurement_units = self.default_units
-        print "Current weather:", self.current_summary()
+        print "Current weather: " + Bcolors.WARNING + self.current_summary() + Bcolors.ENDC
         if self.measurement_units == 'ca' or self.measurement_units == 'si':
             temp_units = self.temperature_measurements['si']
         else:
             temp_units = self.temperature_measurements['us']
-        print "Current temp:", self.current_temperature(), temp_units
-        print "Current wind speed:", self.current_wind_speed(), self.wind_measurements[self.measurement_units]
+        print "Current temp: " + Bcolors.WARNING + str(self.current_temperature()) + Bcolors.ENDC + ' ' + temp_units
+        print "Current wind speed: " + Bcolors.WARNING + str(self.current_wind_speed()) + Bcolors.ENDC + ' ' + self.wind_measurements[self.measurement_units]
 
     def current_summary(self):
         return self.currently.get('summary')

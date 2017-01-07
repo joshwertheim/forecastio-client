@@ -17,7 +17,7 @@ def setup(**kwargs):
 
     fcclient = FCClient()
     fcclient.current_forecast_response(position_coordinates, kwargs.get('units_type'))
-    fcclient.current_data()
+    fcclient.current_data(lat=position_coordinates['lat'], lon=position_coordinates['lon'])
 
 def main():
     parser = argparse.ArgumentParser(description="What's the weather?")
