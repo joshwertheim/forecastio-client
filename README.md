@@ -30,17 +30,23 @@ Current weather: Light Rain
 Current temp: 46.69 F
 Current wind speed: 10.28 MPH
 
-[03:46:36] joshuawertheim@Joshuas-Air: ~/Development/python/forecastio-client  > python modules/core.py -zipcode 94107
-Current weather: Partly Cloudy
-Current temp: 46.75 F
-Current wind speed: 7.43 MPH
+[01:51:53] joshuawertheim@Joshuas-Air: ~/Development/python/forecastio-client  > python modules/core.py -zipcode 94107
+SF (Mission Creek), California, US
+
+Current weather: Overcast
+Current temp: 45.93 F
+Current wind speed: 9.34 MPH
 
 [01:11:30] joshuawertheim@Joshuas-Air: ~/Development/python/forecastio-client  > python modules/core.py -zipcode 94107 -units si
+SF (Mission Creek), California, US
+
 Current weather: Light Rain
 Current temp: 7.73 C
 Current wind speed: 4.15 MPS
 
 [01:12:06] joshuawertheim@Joshuas-Air: ~/Development/python/forecastio-client  > python modules/core.py -zipcode 94107 -units ca
+SF (Mission Creek), California, US
+
 Current weather: Light Rain
 Current temp: 7.81 C
 Current wind speed: 14.39 KPH
